@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9.27" type="template" method="upgrade">
+	<name>tpl_gtm</name>
+	<creationDate>2021-06-23</creationDate>
+	<author>Gijs Lamon</author>
+	<authorEmail>info@gileba.be</authorEmail>
+	<authorUrl>http://www.gileba.be/</authorUrl>
+	<copyright>(c) 2021 by Gileba</copyright>
+	<license>GNU/GPL</license>
+	<version>0.1.0</version>
+	<description>GTM Belgiumù</description>
+	<files>
+		<filename>index.php</filename>
+		<filename>offline.php</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+	<positions>
+	</positions>
+</extension>

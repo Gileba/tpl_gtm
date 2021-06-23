@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.9.13" method="upgrade">
+	<name>EGTM Belgium Template Package</name>
+	<author>Gijs Lamon</author>
+	<creationDate>2021-06-23</creationDate>
+	<packagename>gtm</packagename>
+	<version>0.1.0</version>
+	<packager>Gijs Lamon</packager>
+	<infourl title="GTM Belgium Template Package">https://github.com/Gileba/tpl_gtm/releases/tag/0.1.0</infourl>
+	<description>Package containing the template and its dependancies for the GTM Belgium website</description>
+	<files folder="packages">
+		<file type="template" id="gtm" client="site">tpl_gtm.zip</file>
+		<file type="plugin" id="templatecompanion" group="system">plg_system_templatecompanion.zip</file>
+	</files>
+	<updateservers>
+		<server type="extension" name="GTM Belgium Package">https://updates.gileba.be/tpl_gtm.xml</server>
+	</updateservers>
+</extension>

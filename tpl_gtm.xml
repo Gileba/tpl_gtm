@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<updates>
+	<update>
+		<name>GTM Belgium Template (Package)</name>
+		<description>GTM Belgium Template (Package)</description>
+		<element>gtm</element>
+		<type>package</type>
+		<version>0.1.0</version>
+		<infourl title="GTM Belgiumù Template Package">https://github.com/Gileba/tpl_gtm/releases/tag/0.1.0</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/Gileba/tpl_gtm/releases/download/0.1.0/pkg_gtm.zip</downloadurl>
+		</downloads>
+		<tags>
+			<tag>stable</tag>
+		</tags>
+		<targetplatform name="joomla" version="3.[9]"/>
+		<client>0</client>
+	</update>
+</updates>
