@@ -13,7 +13,14 @@
 		<filename>index.php</filename>
 		<filename>offline.php</filename>
 		<filename>templateDetails.xml</filename>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>less</folder>
 	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_gtm.ini</language>
+		<language tag="nl-BE">nl-BE/nl-BE.tpl_gtm.ini</language>
+	</languages>
 	<positions>
 	</positions>
 	<fields name="params">
@@ -21,7 +28,7 @@
 			<field name="useLESS" type="hidden" default="true" />
 		</fieldset>
 		<fieldset name="google">
-			<field name="analytics" type="textbox" default="" label="TPL_TRTA_ANALYTICS" description="TPL_TRTA_ANALYTICS_DESC" />
+			<field name="analytics" type="textbox" default="" label="TPL_GTM_ANALYTICS" description="TPL_GTM_ANALYTICS_DESC" />
 		</fieldset>
 	</fields>
 </extension>
