@@ -1,0 +1,30 @@
+.footer {
+	background-color: @primary-color;
+	padding: 20px 0;
+	color: white;
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+
+	div {
+		padding: 0 40px;
+		flex: auto;
+		align-self: stretch;
+		justify-content: flex-end;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+
+	div:not(:last-child) {
+		border-right: white 2px solid;
+	}
+
+	.logo {
+		img {
+			max-height: 125px; // TODO: fit heighest flex text div
+			max-width: 100%;
+		}
+	}
+}
