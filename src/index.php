@@ -53,6 +53,12 @@ if(!function_exists('mobile_user_agent_switch')){
 	</head>
 	<body class="<?php echo $pageclass ? htmlspecialchars($pageclass) : 'default'; ?> <?php echo mobile_user_agent_switch(); ?>">
 		<div class="container">
+			<div class="contact">
+				<jdoc:include type="modules" name="contact" />
+			</div>
+			<div class="footer">
+				<jdoc:include type="modules" name="footer" />
+			</div>
 		</div>
 	</body>
 </html>

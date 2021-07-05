@@ -22,6 +22,8 @@
 		<language tag="nl-BE">nl-BE/nl-BE.tpl_gtm.ini</language>
 	</languages>
 	<positions>
+		<position>contact</position>
+		<position>footer</position>
 	</positions>
 	<fields name="params">
 		<fieldset name="global">
