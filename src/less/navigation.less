@@ -1,5 +1,14 @@
 .navigation {
 	width: 100%;
+	display: flex;
+	justify-content: space-between;
+
+	.logo {
+		img {
+			margin: 10px 30px;
+			max-height: 50px;  // TODO: fit height of ul
+		}
+	}
 
 	ul {
 		display: flex;
@@ -12,7 +21,7 @@
 			display: inline-flex;
 
 			a {
-				padding: 20px 10px;
+				padding: 30px 10px;
 				text-decoration: none;
 				color: @text-color;
 			}
@@ -26,7 +35,7 @@
 				background-color: @primary-color;
 				color: white;
 				padding: 5px 20px;
-				margin: 15px 40px 15px 0;
+				margin: 25px 40px 25px 0;
 				border-radius: 20px;
 			}
 		}

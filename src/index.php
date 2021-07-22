@@ -57,6 +57,9 @@ if(!function_exists('mobile_user_agent_switch')){
 				<jdoc:include type="modules" name="top" />
 			</div>
 			<div class="navigation">
+				<div class="logo">
+					<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template?>/images/logo.png" />
+				</div>
 				<jdoc:include type="modules" name="navigation" />
 			</div>
 			<div class="messages">
