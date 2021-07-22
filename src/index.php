@@ -59,6 +59,9 @@ if(!function_exists('mobile_user_agent_switch')){
 			<div class="navigation">
 				<jdoc:include type="modules" name="navigation" />
 			</div>
+			<div class="messages">
+				<jdoc:include type="message" />
+			</div>
 			<div class="contact">
 				<jdoc:include type="modules" name="contact" />
 			</div>
