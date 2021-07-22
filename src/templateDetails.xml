@@ -23,6 +23,7 @@
 	</languages>
 	<positions>
 		<position>top</position>
+		<position>navigation</position>
 		<position>contact</position>
 		<position>footer</position>
 	</positions>

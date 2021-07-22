@@ -1,0 +1,33 @@
+.navigation {
+	width: 100%;
+
+	ul {
+		display: flex;
+		justify-content: flex-end;
+		list-style: none;
+
+		li {
+			margin-left: 30px;
+			display: inline-flex;
+
+			a {
+				padding: 20px 10px;
+				text-decoration: none;
+				color: @text-color;
+			}
+
+			&.active a {
+				font-weight: bolder;
+				color: @primary-color;
+			}
+
+			a.contactmenuitem {
+				background-color: @primary-color;
+				color: white;
+				padding: 5px 20px;
+				margin: 15px 40px 15px 0;
+				border-radius: 20px;
+			}
+		}
+	}
+}
