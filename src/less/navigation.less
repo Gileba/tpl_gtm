@@ -26,9 +26,9 @@
 				color: @text-color;
 			}
 
-			&.active a {
-//				font-weight: bolder;
-//				color: @primary-color;
+			&.active > a {
+				font-weight: bold;
+				color: @primary-color;
 			}
 
 			a.contactmenuitem {
@@ -37,6 +37,41 @@
 				padding: 5px 20px;
 				margin: 25px 40px 25px 0;
 				border-radius: 20px;
+			}
+
+			&.parent ul {
+				display: none;
+				position: absolute;
+				top: 70px;
+				right: 0;
+				padding: 10px;
+				z-index: 2;
+				background-color: white;
+			}
+
+			&.parent a:hover + ul.nav-child, ul.nav-child:hover {
+				display: flex;
+			}
+
+			ul.nav-child {
+				justify-content: flex-start;
+
+				li {
+					margin-left: 10px;
+					flex-basis: 30%;
+
+					a {
+						padding: 10px 20px;
+					}
+				}
+			}
+
+			ul.nav-child li:not(:nth-child(3n)) {
+				border-right: solid 1px @primary-color;
+			}
+
+			ul.nav-child.unstyled li:last-child {
+				border-right: none;
 			}
 		}
 	}

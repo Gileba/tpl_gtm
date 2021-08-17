@@ -38,7 +38,7 @@ if ($params->get('dropdown', 0) && !$params->get('dropdownimage', 1))
 				<a href="#" data-toggle="dropdown" class="btn dropdown-toggle">
 					<span class="caret"></span>
 					<?php if ($language->image) : ?>
-						&nbsp;<?php echo JHtml::_('image', 'mod_languages/' . $language->image . '.gif', '', null, true); ?>
+						&nbsp;<?php echo JHtml::_('image', 'mod_languages/' . $language->image . '.png', '', null, true); ?>
 					<?php endif; ?>
 					<?php if (!$language->image) : ?>
 						<?php echo $language->title_native; ?>
@@ -52,7 +52,7 @@ if ($params->get('dropdown', 0) && !$params->get('dropdownimage', 1))
 				<li>
 				<a href="<?php echo htmlspecialchars_decode(htmlspecialchars($language->link, ENT_QUOTES, 'UTF-8'), ENT_NOQUOTES); ?>">
 					<?php if ($language->image) : ?>
-						<?php echo JHtml::_('image', 'mod_languages/' . $language->image . '.gif', '', null, true); ?>
+						<?php echo JHtml::_('image', 'mod_languages/' . $language->image . '.png', '', null, true); ?>
 					<?php endif; ?>
 <?php if (!$language->image) : ?>
 <?php echo $language->title_native; ?>
@@ -64,7 +64,7 @@ if ($params->get('dropdown', 0) && !$params->get('dropdownimage', 1))
 				<li class="lang-active">
 				<a href="<?php echo htmlspecialchars_decode(htmlspecialchars($base, ENT_QUOTES, 'UTF-8'), ENT_NOQUOTES); ?>">
 					<?php if ($language->image) : ?>
-						<?php echo JHtml::_('image', 'mod_languages/' . $language->image . '.gif', '', null, true); ?>
+						<?php echo JHtml::_('image', 'mod_languages/' . $language->image . '.png', '', null, true); ?>
 					<?php endif; ?>
 <?php if (!$language->image) : ?>
 <?php echo $language->title_native; ?>
@@ -83,7 +83,7 @@ if ($params->get('dropdown', 0) && !$params->get('dropdownimage', 1))
 			<a href="<?php echo htmlspecialchars_decode(htmlspecialchars($language->link, ENT_QUOTES, 'UTF-8'), ENT_NOQUOTES); ?>">
 			<?php if ($params->get('image', 1)) : ?>
 				<?php if ($language->image) : ?>
-					<?php echo JHtml::_('image', 'mod_languages/' . $language->image . '.gif', true); ?>
+					<?php echo JHtml::_('image', 'mod_languages/' . $language->image . '.png', true); ?>
 				<?php else : ?>
 					<span class="label"><?php echo strtoupper($language->sef); ?></span>
 				<?php endif; ?>
@@ -98,7 +98,7 @@ if ($params->get('dropdown', 0) && !$params->get('dropdownimage', 1))
 			<a href="<?php echo htmlspecialchars_decode(htmlspecialchars($base, ENT_QUOTES, 'UTF-8'), ENT_NOQUOTES); ?>">
 			<?php if ($params->get('image', 1)) : ?>
 				<?php if ($language->image) : ?>
-<?php echo JHtml::_('image', 'mod_languages/' . $language->image . '.gif', true); ?>
+<?php echo JHtml::_('image', 'mod_languages/' . $language->image . '.png', true); ?>
 				<?php else : ?>
 					<span class="label"><?php echo strtoupper($language->sef); ?></span>
 				<?php endif; ?>

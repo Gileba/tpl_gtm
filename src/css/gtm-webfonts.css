@@ -1,0 +1,29 @@
+@font-face {
+	font-family: "gtm";
+	src: url("../assets/webfonts/gtm.woff2?4quh92") format("woff2"),
+		url("../assets/webfonts/gtm.woff?4quh92") format("woff");
+	font-style: normal;
+	font-weight: 400;
+}
+
+.icon {
+	display: inline-block;
+	font-family: "gtm" !important;
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: 1;
+	vertical-align: -0.125em;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook::before {
+	content: "\ea01";
+}
+.icon-instagram::before {
+	content: "\ea02";
+}

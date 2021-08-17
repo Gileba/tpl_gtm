@@ -50,6 +50,8 @@ if(!function_exists('mobile_user_agent_switch')){
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<jdoc:include type="head" />
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
+		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/gtm-webfonts.css" type="text/css" />
+		<script src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/menu.js"></script>
 	</head>
 	<body class="<?php echo $pageclass ? htmlspecialchars($pageclass) : 'default'; ?> <?php echo mobile_user_agent_switch(); ?>">
 		<div class="container">
