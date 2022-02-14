@@ -1,0 +1,110 @@
+.offcanvas {
+	display: none;
+}
+
+.customhamburger {
+	display: none;
+}
+
+@media screen and (max-width: 1140px) {
+	.top {
+		.customhamburger {
+			display: block;
+			z-index: 99;
+			color: white;
+			margin: 5px 10px 0 10px;
+
+			.hamburger {
+				padding: 3px 5px 0 20px;
+				border-left: 1px solid white;
+
+				.hamburger-inner,
+				.hamburger-inner::before,
+				.hamburger-inner::after {
+					background-color: white;
+				}
+			}
+		}
+	}
+
+	.offcanvas {
+		background-color: white;
+		top: 60px;
+		right: 0;
+		width: 60%;
+		z-index: 99;
+		flex: 1 0;
+		position: fixed;
+		margin: 0;
+
+		ul.nav {
+			display: flex;
+			width: 100%;
+			flex-direction: column;
+			text-align: left;
+			padding-inline-start: 10px;
+			max-height: 80vh;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			text-transform: capitalize;
+			list-style: none;
+			padding-bottom: 20px;
+
+			li {
+				padding: 10px;
+				font-weight: bold;
+
+				a {
+					text-decoration: none;
+					color: @primary-color;
+				}
+			}
+
+			li:first-child {
+				padding-top: 0;
+			}
+
+			li:last-child {
+				padding-bottom: 0;
+				border-bottom: none;
+			}
+
+			li.parent {
+				&::after {
+					display: none;
+				}
+
+				& > a {
+					border-bottom: 1px dashed white;
+				}
+
+				ul {
+					display: block;
+					padding-inline-start: 10px;
+					list-style-type: none;
+					margin-top: 10px;
+
+					li {
+						padding: 10px;
+						font-weight: normal;
+
+						a {
+							color: @text-color;
+						}
+					}
+				}
+			}
+
+			.active {
+				border-left: @primary-color solid 3px;
+				font-weight: bolder;
+			}
+		}
+		.customhamburger {
+			display: none;
+		}
+	}
+	.offcanvas.open {
+		display: block;
+	}
+}

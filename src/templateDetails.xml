@@ -22,10 +22,14 @@
 		<language tag="nl-BE">nl-BE/nl-BE.tpl_gtm.ini</language>
 	</languages>
 	<positions>
+		<position>offcanvas</position>
 		<position>top</position>
 		<position>navigation</position>
 		<position>contact</position>
 		<position>footer</position>
+		<position>breadcrumb</position>
+		<position>related</position>
+		<position>content-top</position>
 	</positions>
 	<fields name="params">
 		<fieldset name="global">

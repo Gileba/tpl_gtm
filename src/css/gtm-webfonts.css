@@ -1,12 +1,17 @@
 @font-face {
 	font-family: "gtm";
-	src: url("../assets/webfonts/gtm.woff2?4quh92") format("woff2"),
-		url("../assets/webfonts/gtm.woff?4quh92") format("woff");
+	src: url("../assets/webfonts/gtm.woff2?mmqlqu") format("woff2"),
+		url("../assets/webfonts/gtm.woff?mmqlqu") format("woff");
 	font-style: normal;
 	font-weight: 400;
 }
 
-.icon {
+.icon,
+.deeper::after,
+.navigation li li a::before,
+.dropdown-toggle::after,
+.mod-articles-category-title::before,
+.swiped-button::before {
 	display: inline-block;
 	font-family: "gtm" !important;
 	font-style: normal !important;
@@ -21,9 +26,32 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-facebook::before {
+.icon-caret-down::before,
+.deeper::after,
+.dropdown-toggle::after,
+.dropdown-menu a::after {
 	content: "\ea01";
 }
-.icon-instagram::before {
+.icon-caret-left::before,
+.swiped-button-back::before {
 	content: "\ea02";
+}
+.icon-caret-right::before,
+.navigation li li a::before,
+.mod-articles-category-title::before,
+.swiped-button-next::before {
+	content: "\ea03";
+}
+.icon-caret-up::before {
+	content: "\ea04";
+}
+.icon-facebook::before {
+	content: "\ea05";
+}
+.icon-linkedin::before {
+	content: "\ea06";
+}
+
+.deeper .deeper::after {
+	content: none;
 }

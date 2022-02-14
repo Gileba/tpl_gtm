@@ -1,0 +1,89 @@
+.blog {
+	&.news {
+		.items-row.cols-3 {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			margin: 0 50px 20px;
+			column-gap: 20px;
+
+			.article {
+				margin: 0;
+				justify-content: center;
+			}
+		}
+	}
+
+	.icons {
+		display: none;
+	}
+
+	.article {
+		min-height: 100px;
+		margin: 0 50px 20px;
+		padding: 50px 0;
+		display: flex;
+		background-position: center center;
+
+		@media screen and (max-width: 1000px) {
+			justify-content: center;
+		}
+
+		&.intro-right {
+			justify-content: flex-end;
+			@media screen and (max-width: 1000px) {
+				justify-content: center;
+			}
+		}
+
+		&.intro-center {
+			justify-content: center;
+			@media screen and (max-width: 1000px) {
+				justify-content: center;
+			}
+		}
+
+		&.circle {
+			padding: 0 50px;
+
+			.intro {
+				background-image: url("../images/cirkel-rood.png");
+				background-position: top;
+				background-color: revert;
+				background-repeat: no-repeat;
+				background-size: cover;
+				padding: 70px 40px 20px;
+				text-align: center;
+			}
+		}
+
+		h2[itemprop="name"] {
+			display: none;
+		}
+
+		.intro {
+			max-width: 300px;
+			background-color: @primary-color;
+			color: white;
+			padding: 40px;
+
+			span[id^="cloak"] {
+				a {
+					text-transform: lowercase;
+				}
+			}
+
+			a {
+				color: white;
+				text-decoration: none;
+			}
+
+			.readmore {
+text-transform: uppercase;
+				font-family: "museo-sans-rounded";
+				font-weight: 700;
+				font-size: 0.8em;
+				margin-top: 20px;
+			}
+		}
+	}
+}

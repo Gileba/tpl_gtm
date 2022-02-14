@@ -1,0 +1,23 @@
+.breadcrumb {
+	list-style-type: none;
+	display: flex;
+	font-size: 0.8em;
+	margin: 15px 0 0 10px;
+
+	li:not(:first-child) {
+		padding: 0 10px 0 10px;
+		margin-bottom: 20px;
+		border-left: 1px solid @text-color;
+
+		a {
+			color: @primary-color;
+			text-decoration: none;
+		}
+	}
+
+	@media screen and (max-width: 900px) {
+		li:nth-child(2) {
+			display: none;
+		}
+	}
+}

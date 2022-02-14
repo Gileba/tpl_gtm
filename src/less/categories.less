@@ -1,0 +1,249 @@
+.category {
+	background-position: center center;
+
+	h3.page-header {
+		display: none;
+	}
+
+	.category-desc {
+		color: white;
+		margin-bottom: 20px;
+		overflow: auto;
+		display: grid;
+		grid-template-columns: auto auto;
+
+		@media screen and (max-width: 1000px) {
+			grid-template-columns: auto;
+			justify-content: center;
+		}
+
+		& > a {
+			text-decoration: none;
+			color: white;
+		}
+
+		h1.extralarge {
+			font-size: 3em;
+		}
+
+		& > div,
+		& > a {
+			margin: 50px 50px 0;
+
+			@media screen and (max-width: 1100px) {
+				margin: 50px 0 0;
+			}
+		}
+
+		& > div.circle,
+		& > a.circle {
+			background-image: url("../images/cirkel-rood.png");
+			background-position: top;
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 70px 40px 20px;
+			text-align: center;
+			width: 300px;
+			min-height: 100px;
+		}
+
+		& > div.fullcircle,
+		& > a.fullcircle {
+			padding: 70px 40px;
+			text-align: center;
+			background-color: @primary-color;
+			border-radius: 50%;
+			min-height: 100px;
+			margin: 0;
+			width: 300px;
+		}
+
+		& > div:not(.breakdown-service):not(.sales-icons):not(.circle):not(.fullcircle):not(.rental-icons),
+		& > a:not(.breakdown-service):not(.sales-icons):not(.circle):not(.fullcircle):not(.rental-icons) {
+			padding: 40px 40px 0;
+			background-color: @primary-color;
+			min-height: 100px;
+
+			@media screen and (min-width: 500px) {
+				width: 300px;
+			}
+		}
+
+		.right {
+			justify-self: end;
+			grid-column-start: 2;
+		}
+
+		.center {
+			justify-self: center;
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
+
+		& > :not(.circle):not(.fullcircle):not(.breakdown-service){
+			margin-bottom: 40px;
+		}
+
+		.readmore {
+			font-family: "museo-sans-rounded";
+			font-weight: 700;
+			font-size: 0.9em;
+			margin: 20px 0;
+			text-transform: uppercase;
+			a {
+				color: white;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+		}
+
+		& > div.breakdown-service,
+		& > a.breakdown-service {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: @text-color;
+			grid-column-start: 1;
+			grid-column-end: 3;
+			margin: 20px 50px;
+
+img {
+	max-height: 120px;
+	width: auto;
+	margin: 0 40px;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+@media screen and (max-width: 1200px) {
+	display: block;
+	text-align: center;
+}
+		}
+
+		& > div.breakdown-service {
+			margin: 0 50px;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			justify-items: stretch;
+
+			& > .news {
+				border-right: 1px solid @primary-color;
+				align-self: stretch;
+				margin-bottom: 0;
+
+				& > h2, & > p.readmore {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+
+				& > p.readmore > a {
+					background-color: @primary-color;
+					padding: 10px 20px;
+					color: white;
+					border-radius: 20px;
+				}
+			}
+
+			& > .service247 {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+
+		.sales-icons {
+			display: grid;
+			grid-template-columns: 25% 25% 25% 25%;
+
+			@media screen and (max-width: 1100px) {
+				//				display: none;
+				grid-template-columns: 50% 50%;
+			}
+			@media screen and (max-width: 799px) {
+				//				display: none;
+				grid-template-columns: 100%;
+			}
+			margin-left: 0;
+			justify-content: center;
+
+			.sales-icon {
+				padding: 0 20px;
+				a {
+					color: @text-color;
+					display: flex;
+					flex-direction: column;
+
+					img {
+						max-width: 80%;
+						margin: auto;
+					}
+
+					span {
+						text-align: center;
+						font-family: "museo-sans-rounded";
+						font-weight: 700;
+						text-transform: none;
+					}
+				}
+			}
+		}
+
+		.rental-icons {
+			display: grid;
+			grid-template-columns: 25% 25% 25% 25%;
+			@media screen and (max-width: 1100px) {
+				//				display: none;
+				grid-template-columns: 50% 50%;
+			}
+			@media screen and (max-width: 799px) {
+				//				display: none;
+				grid-template-columns: 100%;
+			}
+			justify-self: end;
+			margin-left: 0;
+
+			.rental-icon {
+				text-align: center;
+				align-self: center;
+				padding: 0 20px;
+
+				img {
+					max-width: 80%;
+					margin: auto;
+				}
+
+				div {
+					color: @text-color;
+					display: flex;
+					flex-direction: column;
+					font-weight: 700;
+
+					span {
+						text-align: center;
+						font-family: "museo-sans-rounded";
+						font-weight: 700;
+						text-transform: none;
+					}
+				}
+			}
+
+			.rental-icon:not(:last-child) {
+				border-right: @primary-color 1px solid;
+
+				@media screen and (max-width: 1100px) {
+					&:nth-child(2) {
+						border-right: none;
+					}
+				}
+
+				@media screen and (max-width: 799px) {
+					border-right: none;
+				}
+			}
+		}
+	}
+}

@@ -1,5 +1,90 @@
-.contact {
-	background-color: rgb(123, 125, 123);
+.item-page div[itemprop="articleBody"] > .contact {
+	margin: 30px -50px 30px;
+
+	#cf_2, #cf_5 {
+		--padding: 40px;
+	}
+}
+
+.component .item-page div[itemprop="articleBody"] .contact-article {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	margin: 0 -50px 50px;
+
+	@media screen and (max-width: 800px) {
+		display: block;
+		margin: 0;
+	}
+
+	& > div {
+		width: 30%;
+		padding-top: 20px;
+		align-content: stretch;
+		display: flex;
+		flex-wrap: wrap;
+
+		@media screen and (max-width: 800px) {
+			border-right: none;
+			width: 100%;
+			margin-bottom: 50px;
+		}
+		.main {
+			font-weight: bold;
+			margin-bottom: 30px;
+			width: 100%;
+
+			.locatie {
+				text-transform: uppercase;
+				font-size: 1.2em;
+			}
+
+			a {
+				color: @text-color;
+				text-decoration: none;
+			}
+		}
+		.details {
+			display: flex;
+			flex-wrap: nowrap;
+			font-size: 0.8em;
+			width: 100%;
+
+			.adres {
+				border-right: 1px solid @primary-color;
+				width: 40%;
+				margin-right: 20px;
+			}
+
+			.uren {
+				width: 45%;
+			}
+
+			dt {
+				float: left;
+				width: 45%;
+			}
+		}
+	}
+
+	.breakdown-service {
+		display: block;
+		text-align: center;
+		border-right: none;
+	}
+
+	& > div:not(:last-child) {
+		border-right: 1px solid @primary-color;
+
+		@media screen and (max-width: 800px) {
+			border-right: none;
+		}
+	}
+}
+
+.container > .contact,
+div[itemprop="articleBody"] > .contact {
+	background-color: rgb(157, 157, 157);
 	color: white;
 	min-height: 200px;
 	margin-bottom: 10px;
@@ -12,7 +97,7 @@
 	}
 
 	.cirkel {
-		background: url('../images/contact-bg.png');
+		background: url("../images/contact-bg.png");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
@@ -26,5 +111,36 @@
 		table {
 			border-spacing: 15px 8px;
 		}
+	}
+
+	.cirkel.breakdown {
+		background: url("../images/contact-bg-247.png");
+		background-size: cover;
+	}
+
+	.cirkel.administratie {
+		background: url("../images/contact-bg-admin.png");
+		background-size: cover;
+	}
+
+	.cirkel.magazijn {
+		background: url("../images/contact-bg-magazijn.png");
+		background-size: cover;
+	}
+
+	.cirkel.verkoop {
+		background: url("../images/contact-bg-verkoop.png");
+		background-size: cover;
+	}
+
+	.cirkel.werkplaats {
+		background: url("../images/contact-bg-werkplaats.png");
+		background-size: cover;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.container > .contact {
+		display: none;
 	}
 }

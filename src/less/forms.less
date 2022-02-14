@@ -1,0 +1,43 @@
+body .convertforms.cf-success .cf-response {
+	color: @primary-color;
+	background-color: white;
+}
+
+#cf_2, #cf_5 {
+	--padding: 40px;
+
+	.cf-control-label label {
+		font-weight: bold;
+	}
+
+	.cf-content-wrap {
+		display: none;
+	}
+
+	div[data-key="16"] {
+		background-color: @primary-color;
+		margin-bottom: 1em;
+
+		h2 {
+			color: white;
+			margin: 1em;
+			font-size: 2em !important;
+			line-height: unset !important;
+			letter-spacing: unset !important;
+		}
+	}
+
+	div[data-key="15"] {
+		div.cf-control-input {
+			display: none;
+		}
+	}
+}
+
+// Mailchimp : Nieuwsbrief (NL)
+.content-top {
+	#cf_3, #cf_7 {
+		--max-width: 100%;
+		margin: 60px 100px;
+	}
+}
