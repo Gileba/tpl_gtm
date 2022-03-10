@@ -7,14 +7,18 @@
 
 	.category-desc {
 		color: white;
-		margin-bottom: 20px;
 		overflow: auto;
 		display: grid;
 		grid-template-columns: auto auto;
 
 		@media screen and (max-width: 1000px) {
 			grid-template-columns: auto;
-			justify-content: center;
+		}
+
+		& > :not(.breakdown-service) {
+@media screen and (max-width: 1000px) {
+			justify-self: center;
+		}
 		}
 
 		& > a {
@@ -71,7 +75,12 @@
 
 		.right {
 			justify-self: end;
-			grid-column-start: 2;
+grid-column-start: 2;
+			@media screen and (max-width: 1000px) {
+				justify-self: center;
+grid-column-start: 1;
+			}
+
 		}
 
 		.center {
@@ -108,7 +117,7 @@
 			margin: 20px 50px;
 
 img {
-	max-height: 120px;
+	max-height: 100px;
 	width: auto;
 	margin: 0 40px;
 }
@@ -124,15 +133,27 @@ h2 {
 		}
 
 		& > div.breakdown-service {
-			margin: 0 50px;
+			margin: 10px 50px;
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			justify-items: stretch;
+
+			@media screen and (max-width: 1080px) {
+				grid-template-columns: 1fr;
+			}
+
 
 			& > .news {
 				border-right: 1px solid @primary-color;
 				align-self: stretch;
 				margin-bottom: 0;
+
+@media screen and (max-width: 1080px) {
+	border-right: none;
+	border-bottom: 1px solid @primary-color;
+	width: 60%;
+	margin: auto;
+}
 
 				& > h2, & > p.readmore {
 					display: flex;
@@ -152,6 +173,10 @@ h2 {
 				display: flex;
 				align-items: center;
 				justify-content: center;
+
+				@media screen and (max-width: 1080px) {
+					padding-top: 20px;
+}
 			}
 		}
 
@@ -221,13 +246,9 @@ h2 {
 					display: flex;
 					flex-direction: column;
 					font-weight: 700;
-
-					span {
 						text-align: center;
 						font-family: "museo-sans-rounded";
-						font-weight: 700;
 						text-transform: none;
-					}
 				}
 			}
 
