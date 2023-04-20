@@ -2,13 +2,13 @@
 	display: none;
 }
 
-.customhamburger {
+.customhamburger, .hamburgermenu {
 	display: none;
 }
 
 @media screen and (max-width: 1140px) {
 	.top {
-		.customhamburger {
+		.customhamburger, .hamburgermenu {
 			display: block;
 			z-index: 99;
 			color: white;
@@ -28,14 +28,26 @@
 	}
 
 	.offcanvas {
-		background-color: white;
-		top: 60px;
+		background-color: rgba(255,255,255, 0.5);
+		width: 100%;
+		top: 46px;
 		right: 0;
-		width: 60%;
 		z-index: 99;
-		flex: 1 0;
 		position: fixed;
 		margin: 0;
+		justify-content: flex-end;
+			max-height: 100%;
+
+		.menu-container {
+			padding: 15px 0;
+			background-color: white;
+			width: 60%;
+			top: 0;
+			right: 0;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			max-height: 100vh;
+		}
 
 		ul.nav {
 			display: flex;
@@ -43,12 +55,9 @@
 			flex-direction: column;
 			text-align: left;
 			padding-inline-start: 10px;
-			max-height: 80vh;
-			overflow-y: scroll;
-			overflow-x: hidden;
 			text-transform: capitalize;
 			list-style: none;
-			padding-bottom: 20px;
+			padding-bottom: 50px;
 
 			li {
 				padding: 10px;
@@ -105,6 +114,6 @@
 		}
 	}
 	.offcanvas.open {
-		display: block;
+		display: flex;
 	}
 }

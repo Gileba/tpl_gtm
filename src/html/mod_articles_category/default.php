@@ -8,11 +8,9 @@
  */
 
 defined("_JEXEC") or die(); ?>
-<?php if ($module->showtitle): ?>
 <div class="mod-title">
 <?php echo $module->title; ?>
 </div>
-<?php endif; ?>
 
 <ul class="category-module<?php echo $moduleclass_sfx; ?> mod-list">
 	<?php if ($grouped): ?>

@@ -48,7 +48,7 @@
 				border-radius: 20px;
 			}
 
-			&.parent ul.nav-child {
+			&.parent ul,  {
 				display: flex;
 				opacity: 0;
 				position: absolute;
@@ -61,18 +61,18 @@
 				transition: opacity 0.3s linear;
 			}
 
-			&.parent ul.nav-child li ul.nav-child {
+			&.parent ul li ul {
 				top: 50px;
 				font-size: 0.8em;
 			}
 
-			&.parent:hover > ul.nav-child,
+			&.parent:hover > ul,
 			ul.nav-child:hover {
 				opacity: 1;
 				pointer-events: all;
 			}
 
-			ul.nav-child {
+			ul.nav-child, ul.mod-menu__sub {
 				justify-content: flex-start;
 				box-shadow: 5px 10px 8px #888888;
 

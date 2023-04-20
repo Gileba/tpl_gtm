@@ -79,32 +79,36 @@ if (!function_exists("mobile_user_agent_switch")) {
 	<body class="<?php echo $pageclass
  	? htmlspecialchars($pageclass)
  	: "default"; ?> <?php echo mobile_user_agent_switch(); ?>">
-	 	<div class="offcanvas"><jdoc:include type="modules" name="offcanvas" /></div>
+	 	<div class="offcanvas">
+			 <div class="menu-container">
+			 	<jdoc:include type="modules" name="offcanvas" style="html5" />
+			 </div>
+		</div>
 		<div class="container">
 			<div class="top">
-				<jdoc:include type="modules" name="top" />
+				<jdoc:include type="modules" name="top" style="html5" />
 			</div>
 			<div class="navigation">
 				<div class="logo">
 					<a href="/"><img src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/images/logo.png" /></a>
 				</div>
-				<jdoc:include type="modules" name="navigation" />
+				<jdoc:include type="modules" name="navigation" style="html5" />
 			</div>
 			<div class="messages">
 				<jdoc:include type="message" />
 			</div>
 			<div class="component">
-				<div class="content-top"><jdoc:include type="modules" name="content-top" /></div>
+				<div class="content-top"><jdoc:include type="modules" name="content-top" style="html5" /></div>
 				<jdoc:include type="component" />
-				<div class="related"><jdoc:include type="modules" name="related" /></div>
+				<div class="related"><jdoc:include type="modules" name="related" style="html5" /></div>
 			</div>
 <?php if ($countContactModules): ?>
 			<div class="contact">
-				<jdoc:include type="modules" name="contact" />
+				<jdoc:include type="modules" name="contact" style="html5" />
 			</div>
 			<?php endif; ?>
 			<div class="footer">
-				<jdoc:include type="modules" name="footer" />
+				<jdoc:include type="modules" name="footer" style="html5" />
 			</div>
 		</div>
 <script src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/hamburger.js"></script>

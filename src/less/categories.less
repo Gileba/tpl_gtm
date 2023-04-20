@@ -148,12 +148,12 @@ h2 {
 				align-self: stretch;
 				margin-bottom: 0;
 
-@media screen and (max-width: 1080px) {
-	border-right: none;
-	border-bottom: 1px solid @primary-color;
-	width: 60%;
-	margin: auto;
-}
+				@media screen and (max-width: 1080px) {
+					border-right: none;
+					border-bottom: 1px solid @primary-color;
+					width: 60%;
+					margin: auto;
+				}
 
 				& > h2, & > p.readmore {
 					display: flex;
@@ -176,7 +176,14 @@ h2 {
 
 				@media screen and (max-width: 1080px) {
 					padding-top: 20px;
-}
+					display: block;
+
+					h2 {
+						margin-top: 20px;
+					}
+				}
+
+
 			}
 		}
 

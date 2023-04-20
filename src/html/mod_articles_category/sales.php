@@ -11,11 +11,9 @@ defined("_JEXEC") or die();
 JLoader::register("FieldsHelper", JPATH_ADMINISTRATOR . "/components/com_fields/helpers/fields.php");
 ?>
 
-<?php if ($module->showtitle): ?>
 <div class="mod-title">
 <?php echo $module->title; ?>
 </div>
-<?php endif; ?>
 
 <ul class="category-module<?php echo $moduleclass_sfx; ?> mod-list sales">
 	<?php if ($grouped): ?>

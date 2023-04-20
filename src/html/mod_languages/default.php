@@ -17,7 +17,7 @@ if ($params->get('dropdown', 0) && !$params->get('dropdownimage', 1))
 }
 
 ?>
-<div class="mod-languages<?php echo $moduleclass_sfx; ?>">
+<div class="mod-languages">
 <?php if ($headerText) : ?>
 	<div class="pretext"><p><?php echo $headerText; ?></p></div>
 <?php endif; ?>

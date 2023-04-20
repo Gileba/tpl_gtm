@@ -20,7 +20,6 @@ $info = $params->get("info_block_position", 0);
 
 // Check if associations are implemented. If they are, define the parameter.
 $assocParam = JLanguageAssociations::isEnabled() && $params->get("show_associations");
-JHtml::_("behavior.caption");
 
 $currentDate = JFactory::getDate()->format("Y-m-d H:i:s");
 $isNotPublishedYet = $this->item->publish_up > $currentDate;
@@ -137,7 +136,7 @@ $isExpired =
  	echo $this->item->pagination;
  endif; ?>
 <div class="pos-breadcrumb">
-	{modulepos breadcrumb}
+	<?php echo JHtml::_('content.prepare', '{loadposition breadcrumb}'); ?>
 </div>
 		<?php if ($this->item->state == 0): ?>
 			<span class="label label-warning"><?php echo JText::_("JUNPUBLISHED"); ?></span>
@@ -186,37 +185,7 @@ $isExpired =
  	((!empty($urls->urls_position) && $urls->urls_position == "1") || $params->get("urls_position") == "1")
  ): ?>
 	<?php echo $this->loadTemplate("links"); ?>
-	<!-- Optional teaser intro text for guests -->
 <?php endif; ?>
-	 <?php if ($params->get("show_noauth") == true && $user->get("guest")): ?>
-	<?php echo JLayoutHelper::render("joomla.content.intro_image", $this->item); ?>
-	<?php echo JHtml::_("content.prepare", $this->item->introtext); ?>
-<?php endif; ?>
-	<?php
- 	// Optional link to let them register to see the whole article.
- 	?>
-	<?php if ($params->get("show_readmore") && $this->item->fulltext != null): ?>
-	<?php $menu = JFactory::getApplication()->getMenu(); ?>
-	<?php $active = $menu->getActive(); ?>
-	<?php $itemId = $active->id; ?>
-	<?php $link = new JUri(JRoute::_("index.php?option=com_users&view=login&Itemid=" . $itemId, false)); ?>
-	<?php $link->setVar(
- 	"return",
- 	base64_encode(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language))
- ); ?>
-	<p class="readmore">
-		<a href="<?php echo $link; ?>" class="register">
-			<?php if ($params->get("alternative_readmore", "") === ""): ?>
-				<?php echo JText::_("COM_CONTENT_REGISTER_TO_READ_MORE"); ?>
-			<?php else: ?>
-				<?php echo $params->get("alternative_readmore"); ?>
-				<?php if ($params->get("show_readmore_title", 0) != 0): ?>
-					<?php echo JHtml::_("string.truncate", $this->item->title, $params->get("readmore_limit")); ?>
-				<?php endif; ?>
-			<?php endif; ?>
-		</a>
-	</p>
-	<?php endif; ?>
 	<?php endif; ?>
 	<?php if (
  	!empty($this->item->pagination) &&
